@@ -1,0 +1,220 @@
+body {
+  background-color: #16191C;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "gilroy-medium";
+}
+
+.button {
+  width: 130px;
+  margin: auto;
+  z-index: 1;
+  position: relative;
+  top: 200px;
+}
+
+.top-title {
+  width: auto;
+  text-align: center;
+  margin-top: 82px;
+}
+
+.hey-text, .help-text {
+  font-size: 2.5rem;
+  position: relative;
+  font-family: system-ui, sans-serif;
+  color: #6563ff;
+  left: 815px;
+  top: -590px;
+}
+.help-text {
+  left: 850px;
+  top: -575px;
+  font-size: 1.2rem;
+}
+
+.logo-main-h {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  top: -200px;
+  left: 330;
+  z-index: 0;
+  animation: fade-in-from-top .10s linear forwards, floating ease 10s infinite
+}
+
+.card-qr-code img, .card-band-aid img, .card-shield-check img, .card-comment-alt-shield img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  margin: 20px;
+  position: relative;
+  /* top: -500px; */
+}
+
+/* CARD --> */
+.card-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-qr-code, .card-band-aid, .card-shield-check, .card-comment-alt-shield {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+  min-width: 380px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+
+
+.card-title {
+  width: auto;
+  position: relative;
+  top: -20px;
+  left: 70px;
+  text-align: left;
+  color: #E8E8F7;
+  font-size: 1.4rem;
+  /* font-size: 1.2vw; */
+  /* font-size: calc(10px + 1.3vw); */
+  font-family: "gilroy-semibold";
+  font-weight: bold;
+}
+
+
+.card-desc {
+  width: 290px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+
+  font-family: "gilroy-medium";
+  color: #70709C;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.box-top-left, .box-top-right, .box-bottom-left, .box-bottom-right {
+  width: 48px;
+  height: 48px;
+  background-color: #1E2126;
+  border-radius: 15%;
+  position: relative;
+  top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .card-title { font-size: 1.2rem; }
+    .card-desc { font-size: 0.9rem; }
+    .box-top-left, .box-top-right, .box-bottom-left, .box-bottom-right {
+      width: 43px;
+      height: 43px;
+    }
+    img {
+      width: 28px;
+      height: 28px;
+    }
+   }
+
+.box-top-left {
+  animation: fade-in-from-top .3s linear forwards, floating ease 3s infinite
+}
+.box-top-right {
+  animation: fade-in-from-top .3s linear forwards, floating ease 2s infinite
+}
+.box-bottom-right {
+  animation: fade-in-from-top .3s linear forwards, floating ease 3s infinite
+}
+.box-bottom-left {
+  animation: fade-in-from-top .3s linear forwards, floating ease 2s infinite
+}
+
+.logo img {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  /* top: 10px;
+  right: -10px; */
+}
+
+.logo {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-color: #ffffff;
+  animation: fade-in-from-top .10s linear forwards, floating ease 10s infinite
+}
+
+.text-container {
+  width: 100%;
+  height: 150px;
+  color: #70709C;
+  font-size: 1.2rem;
+  word-wrap: normal;
+  text-align: center;
+  font-family: "gilroy-medium";
+  position: relative;
+  top: 10px;
+}
+
+.title {
+  height: 80px;
+  color: #E8E8F7;
+  font-size: 4rem;
+  word-wrap: normal;
+  text-align: center;
+  font-family: "gilroy-semibold";
+  position: relative
+}
+
+.row-container {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  top: 100px;
+  display: block;
+}
+
+@font-face {
+font-family: "gilroy-semibold";
+src: url("fonts/gilroy/Gilroy-Semibold.ttf") format("truetype");
+font-style: normal;
+font-weight: normal;
+}
+
+@font-face {
+font-family: "gilroy-medium";
+src: url("fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+font-style: normal;
+font-weight: normal;
+}
+
+
+
+
+
+@keyframes fade-in-from-top {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floating {
+  0% { transform: translate(0%, 0%) rotate(360deg);}
+  50% { transform: translate(0%, 3%) rotate(360deg);}
+  100% { transform: translate(0%, 0%) rotate(360deg);}
+}

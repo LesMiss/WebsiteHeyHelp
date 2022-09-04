@@ -1,0 +1,45 @@
+h1::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #6563ff;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+h1 {
+  font-size: 4rem;
+  position: relative;
+  margin: 0 auto;
+  align-content: center;
+  display:inline;
+  place-content: center;
+  font-family: system-ui, sans-serif;
+  color: #E8E8F7;
+  z-index: 1;
+
+}
+
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    h1 { font-size:3rem; }
+   }

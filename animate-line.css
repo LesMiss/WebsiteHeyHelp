@@ -1,0 +1,44 @@
+:root {
+  --main-color: #17191C;
+  --loader-color: #665FF6;
+  --back-color: #1F2126;
+  --time: 13s;
+  --size: 1px;
+}
+
+.loader {
+	background-color: var(--main-color);
+	/* overflow: hidden; */
+  width: 1000px;
+  height: 10px;
+  radius: 10px;
+  position: relative;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.loader__element {
+	height: var(--size);
+	width: 100%;
+	background: var(--back-color);
+
+}
+
+.loader__element:before {
+	content: '';
+	display: block;
+	background-color: var(--loader-color);
+	height: var(--size);
+  position: relative;
+  margin: 0 auto;
+	width: 0;
+  animation: getWidth var(--time) ease-in infinite;
+}
+
+@keyframes getWidth {
+	50% { width: 100%; }
+}
